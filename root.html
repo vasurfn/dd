@@ -1,0 +1,209 @@
+<html lang="en" dir="<#tag:direction /#>">
+<head>
+<!-- Google Tag Manager Begin -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDKRN7');</script>
+<!-- Google Tag Manager End -->
+  <meta http-equiv="Content-Type" content="text/html; 
+
+charset=utf-8">
+  <meta content="width=device-width,initial-scale = 1,user-
+
+scalable=no,maximum-scale=1.0" name="viewport">
+  <#tag:ads_meta_tags /#>
+    <#tag:language_meta_tags /#>
+      <meta name="keywords" content="<#tag:meta_keywords /#>" 
+
+/>
+      <meta name="description" content="<#tag:meta_description 
+
+/#>" />
+<!-- Bing Webmaster Tools Begin -->
+<meta name="msvalidate.01" content="F154F54B571BC2B368B5E862B26E7595" />
+<!-- Bing Webmaster Tools End -->
+
+      <title>Dominion Domains</title>
+
+      <#loop:css_list#>
+        <link rel="stylesheet" type="text/css" 
+
+href="/<#tag:css_list[].path /#>?v=<#tag:css_list[].version 
+
+/#>" />
+        <#/loop:css_list#>
+
+	<link rel="icon" href="/getImage.php?src=favicon.ico" 
+
+type="image/x-icon" />
+	<link rel="shortcut icon" href="/getImage.php?
+
+src=favicon.ico" type="image/x-icon" />
+
+          <script type="text/javascript" 
+
+src="/ui/supersite/en/js/jquery.js"></script>
+          <script type="text/javascript" 
+
+src="/ui/supersite/en/js/commonScripts.js"></script>
+          <script type="text/javascript" 
+
+src="/ui/supersite/en/js/cart.js"></script>
+
+          <!--[if IE]>
+          <script type="text/javascript">
+            $(function() {
+              var zIndexNumber = 1000;
+              $('#page-header div').each(function() {
+                $(this).css('zIndex', zIndexNumber);
+                zIndexNumber -= 100;
+              });
+            });
+          </script>
+          <![endif]-->
+
+          <script type="text/javascript">
+            objl10n = <#tag:js_translated_messages /#> ;
+          </script>
+
+          <!--[if IE 6]>
+          <link rel="stylesheet" type="text/css" 
+
+href="/<#tag:ie6_css /#>">
+          <![endif]-->
+
+          <!--[if IE 7]>
+          <link rel="stylesheet" type="text/css" 
+
+href="/<#tag:ie7_css /#>">
+          <![endif]-->
+
+          <!--[if IE 8]>
+          <link rel="stylesheet" type="text/css" 
+
+href="/<#tag:ie8_css /#>">
+          <![endif]-->
+
+          <!--[if IE 9]>
+          <link rel="stylesheet" type="text/css" 
+
+href="/<#tag:ie9_css /#>">
+          <![endif]-->
+
+          <!--[if lt IE 9]>
+          <script type="text/javascript" 
+
+src="/<#tag:pie_js_path /#>"></script>
+          <script type="text/javascript" 
+
+src="/<#tag:iefix_js_path /#>"></script>
+          <![endif]-->
+
+          <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+          <link href='//content.dominion.domains/css/main.css' 
+
+rel='stylesheet' type='text/css'>
+<!-- ADOBE DYNAMIC TAG MANAGER HEADER BEGIN -->
+<script src="//assets.adobedtm.com/26357fc6b695ec32606172edcd4635830b9fbdf0/satelliteLib-72f6bde74ea03491443bf586ac1388d45793bd8e.js"></script>
+<!-- ADOBE DYNAMIC TAG MANAGER HEADER END -->
+</head>
+<body class="<#tag:country_code /#> home-bg">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDKRN7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--[if IE 6]>
+<div id="ie6-wrapper">
+  <div id="ie6-header">
+    <div id="ie-header-message"><strong>Upgrade your browser!
+
+</strong> You are using an outdated browser. For a better 
+
+experience, get one of the following:</div>
+    <div id="ie6-browser-wrap">
+      <a id="ie-chorme" target="_blank" 
+
+href="http://www.google.com/chrome">Chrome</a>
+      <a id="ie-firfox" target="_blank" 
+
+href="http://www.mozilla.com">Firefox</a>
+      <a id="ie-iexplorer" target="_blank" 
+
+href="http://windows.microsoft.com/en-US/internet-
+
+explorer/downloads/ie">Internet Explorer</a>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<![endif]-->
+
+<div id="page-header" class="nav-slide">
+  <div id="header-wrapper">
+    <#tag:show_header /#>
+  </div>
+</div>
+
+
+
+
+
+<div id="page-container" class="nav-slide">
+  <div id="page-wrapper">
+    <#tag:show_middle /#>
+  </div>
+</div>
+
+<div id="page-footer">
+  <div id="footer-wrapper">
+    <#tag:show_footer /#>
+  </div>
+</div>
+
+<script>
+
+  var Menu = (function() {
+    var inTrans = false,
+            open = false;
+    var t = 200;
+    function toggleMenu() {
+      inTrans = true;
+      if(!open) {
+        $('body').addClass('nav-open');
+        $("#main-nav").animate({"opacity":"1"}, t);
+        $('.nav-slide').animate({
+          'left' : '260'
+        }, t, function() {
+          inTrans = false;
+        });
+        open=true;
+      } else {
+        $('.nav-slide').animate({
+          'left' : '0'
+        }, t, function() {
+          $('body').removeClass('nav-open');
+          inTrans = false;
+        });
+        $("#main-nav").animate({"opacity":".7"}, t);
+        open=false;
+      }
+    }
+    return function(btnRef) {
+      $(btnRef).click(function() {
+        if(!inTrans) toggleMenu();
+      });
+    }
+  }());
+  Menu('.mobile-menu-btn');
+
+
+
+</script>
+<!-- ADOBE DYNAMIC TAG MANAGER FOOTER BEGIN -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+<!-- ADOBE DYNAMIC TAG MANAGER FOOTER END -->
+</body>
+</html>

@@ -1,0 +1,461 @@
+<script type="text/javascript" src="/ui/supersite/en/js/jquery.innerfade.js"></script>
+<script type="text/javascript" src="/ui/supersite/en/js/jquery.scrollTo.js"></script>
+
+<div  class="new-header-style">
+
+    <h1 id="branding">
+        <span class="logo-cont">
+            <span></span>
+            <a href="/index.php"><img src="/getImage.php?src=logo.gif" alt=""></a>
+        </span>
+    </h1>
+    <#tag:header_dashboard /#>
+    <div class="clear"></div>
+    <div id="primary-nav">
+        <div class="nav">
+            <ul class="navigation">
+
+                <li class="first <#tag:homesection /#>"><a href="/">Home</a></li>
+
+                <li class="levelone <#tag:domainsection /#>">
+                <a href="/domain-registration/index.php">Domains</a>
+                    <ul class="submenu-parent" id="domainssubmenu">
+                        <li>
+                            <h3>Registration</h3>
+                            <ul>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/index.php">Register a Domain</a>
+                                        <p>Book your domain here</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/bulk-domain-registration.php">Bulk Domain Registration</a>
+                                        <p>Bulk Registrations at lower rates</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/new-domain-extensions">New Domain Extensions<span class="mnew-tag">New</span></a>
+                                        <p>Pre-register to get the name of your choice</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/new-domain-extensions/sunrise">Sunrise Domains</a>
+                                        <p>Register domains using your trademark name</p>
+                                    </div>
+                                </li>
+                                <#if_show:premium-domain#>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/premium-domain.php">Premium Domains</a>
+                                        <p>Register catchy, popular Domain Names</p>
+                                    </div>
+                                </li>
+                                <#/if_show:premium-domain#>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/idn">IDN Domain Registration</a>
+                                        <p>Book your internationalized domains here</p>
+                                    </div>
+                                </li>
+
+                                <li class="hide">
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/domain-registration-price.php">View Domain Pricing</a>
+                                        <p>Compare pricing across 50+ extensions</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3>Transfer</h3>
+                            <ul>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/transfer/index.php">Transfer your Domain</a>
+                                        <p>Move in your existing Domains</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/transfer/bulk-domain-transfer.php">Bulk Domain Transfer</a>
+                                        <p>Save by moving domains in bulk</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <h3>Add-ons</h3>
+                            <ul>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/free-with-domain-registration.php">Free with every domain</a>
+                                        <p>Free <#if_show:free_email#>email,<#/if_show:free_email#> DNS, theft protection and more</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/domain-name-suggestion-tool.php">Name suggestion tool</a>
+                                        <p>Use our name spinner for ideas on your ideal domain name</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="menu-icon"></span>
+                                    <div class="menu-content">
+                                        <a href="/domain-registration/domain-whois-lookup.php">Whois lookup</a>
+                                        <p>Perform a Whois Lookup</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <#if:show_sitebuilder_menu#>
+                <li class="levelone <#tag:sitebuildersection /#>">
+                <a href="/website-design/do-it-yourself-website-builder.php">Websites</a>
+                    <ul class="submenu-parent" id="websitessubmenu">
+                        <li>
+                            <h3>Build your Website</h3>
+                            <ul>
+                                <#if_show:sitebuilder#>
+                                <li>
+                                    <span class="menu-icon websitebuilder-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/website-design/do-it-yourself-website-builder.php">Website Builder</a>
+                                        <p>Create your own website instantly, no coding/design skills required. Choose from over 100 themes or simply drag-and-drop to customize your design</p>
+                                    </div>
+                                </li>
+                                <#/if_show:sitebuilder#>
+                                <#if_show:impressly#>
+                                    <li>
+                                        <span class="menu-icon impressly-micon"></span>
+                                        <div class="menu-content">
+                                            <a href="/impressly.php">Impress.ly</a>
+                                            <p>Quickly create an app like website! Use social media content or start from scratch to setup your site.</p>
+                                        </div>
+                                    </li>
+                                <#/if_show:impressly#>
+                            </ul>
+                        </li>
+                        <#if:show_sitebuilder_tool_menu#>
+                        <li>
+                            <h3>Protect your Website</h3>
+                            <ul>
+                                <#if_show:sitelock#>
+                                <li>
+                                    <span class="menu-icon sitelock-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/sitelock.php">SiteLock Malware Detector</a>
+                                        <p>Over 5000 websites get attacked everday. Get SiteLock and secure your website from hackers, viruses and malware.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:sitelock#>
+                                <#if_show:codeguard#>
+                                <li>
+                                    <span class="menu-icon codeguard-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/codeguard.php">Codeguard Website Backup</a>
+                                        <p>Protect yourself from unexpected website crashes. Add CodeGuard and get automatic cloud backup for your website and database.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:codeguard#>
+                            </ul>
+                        </li>
+                        <#/if:show_sitebuilder_tool_menu#>
+                    </ul>
+                </li>
+                <#/if:show_sitebuilder_menu#>
+                <#if:show_hosting_menu#>
+                <li class="levelone <#tag:hostingsection /#>">
+                <a href="/web-hosting/index.php">Hosting</a>
+                    <ul class="submenu-parent <#tag:reduce_hosting_menu_indentation /#>" id="hostingsubmenu">
+                        <#if:show_shared_hosting_menu#>
+                        <li>
+                            <h3>Shared Hosting</h3>
+                            <ul>
+                                <#if_show:lhbus-mdh#>
+                                <li>
+                                    <span class="menu-icon linuxhosting-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/web-hosting/linux-php-hosting.php">Linux Shared Hosting</a>
+                                        <p>Perfect for smaller websites and blogs. Comes with cPanel, PHP, Apache and more</p>
+                                    </div>
+                                </li>
+                                <#/if_show:lhbus-mdh#>
+                                <#if_show:w2kus-mdwh#>
+                                <li>
+                                    <span class="menu-icon windowshosting-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/web-hosting/windows-hosting.php">Windows Shared Hosting</a>
+                                        <p>Perfect for smaller websites, blogs, etc. Comes with Plesk, ASP, IIS and more</p>
+                                    </div>
+                                </li>
+                                <#/if_show:w2kus-mdwh#>
+                            </ul>
+                        </li>
+                        <#/if:show_shared_hosting_menu#>
+                        <#if:show_servers_menu#>
+                        <li>
+                            <h3>Servers</h3>
+                            <ul>
+                                <#if_show:vpslinux#>
+                                <li>
+                                    <span class="menu-icon vps-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/vps-hosting.php">VPS</a>
+                                        <p>For larger websites and apps that require dedicated hardware, at a cheaper price</p>
+                                    </div>
+                                </li>
+                                <#/if_show:vpslinux#>
+
+                                <#if_show:virtualserverlinux#>
+                                <li>
+                                    <span class="menu-icon vps-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/virtualserverlinux-hosting.php">VPS Linux KVM</a>
+                                        <p>For larger websites and apps that require dedicated hardware, at a cheaper price</p>
+                                    </div>
+                                </li>
+                                <#/if_show:virtualserverlinux#>
+
+                                <#if_show:dedicatedserver#>
+                                <li>
+                                    <span class="menu-icon dedicated-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/dedicated-servers.php">Dedicated Servers</a>
+                                        <p>Dedicated hardware and rock-solid performance; perfect for larger websites and apps</p>
+                                    </div>
+                                </li>
+                                <#/if_show:dedicatedserver#>
+
+                                <#if_show:dedicatedserverwindows#>
+                                <li>
+                                    <span class="menu-icon dedicated-win-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/dedicated-servers-windows.php">Windows Dedicated Servers</a>
+                                        <p>Dedicated hardware and rock-solid performance; perfect for larger websites and apps</p>
+                                    </div>
+                                </li>
+                                <#/if_show:dedicatedserverwindows#>
+
+                                <#if_show:managedserver#>
+                                <li>
+                                    <span class="menu-icon managed-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/managed-servers.php">Managed Servers<span class="mnew-tag">New</span></a>
+                                        <p>Get the power of a dedicated server along with our in-house experts to help manage your server</p>
+                                    </div>
+                                </li>
+                                <#/if_show:managedserver#>
+                            </ul>
+                        </li>
+                        <#/if:show_servers_menu#>
+                        <#if:show_reseller_hosting_menu#>
+                        <li>
+                            <h3>Reseller Hosting</h3>
+                            <ul>
+                                <#if_show:resellerhosting#>
+                                <li>
+                                    <span class="menu-icon rhlinuxhosting-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/reseller-hosting.php">Linux Reseller Hosting</a>
+                                        <p>Start your hosting business today. Comes with free WHM, cPanel and WHMCS</p>
+                                    </div>
+                                </li>
+                                <#/if_show:resellerhosting#>
+                                <#if_show:resellerwindowshosting#>
+                                <li>
+                                    <span class="menu-icon rhwindowshosting-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/windows-reseller-hosting.php">Windows Reseller Hosting</a>
+                                        <p>Start your hosting business today. Comes with free Plesk and WHMCS</p>
+                                    </div>
+                                </li>
+                                <#/if_show:resellerwindowshosting#>
+                            </ul>
+                        </li>
+                        <#/if:show_reseller_hosting_menu#>
+                        <#if:show_hosting_tool_menu#>
+                        <li>
+                            <h3>Tools</h3>
+                            <ul>
+                                <#if_show:codeguard#>
+                                <li>
+                                    <span class="menu-icon codeguard-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/codeguard.php">Codeguard Website Backup</a>
+                                        <p>Your data is precious. Secure your website in just a few minutes</p>
+                                    </div>
+                                </li>
+                                <#/if_show:codeguard#>
+                                <#if_show:sitelock#>
+                                <li>
+                                    <span class="menu-icon sitelock-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/sitelock.php">SiteLock Malware Detector</a>
+                                        <p>Over 5000 websites get attacked everday. Get SiteLock and secure your website from hackers, viruses and malware.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:sitelock#>
+                            </ul>
+                        </li>
+                        <#/if:show_hosting_tool_menu#>
+                    </ul>
+                </li>
+                <#/if:show_hosting_menu#>
+                <#if_show:cloudsiteslinux#>
+                    <li class="levelone <#tag:cloudhostingsection /#>">
+                        <a href="/cloudhosting.php">Cloud<span class="mnew-tag inline-block">New</span></a>
+                    </li>
+                <#/if_show:cloudsiteslinux#>
+                <#if_show:mailbox#>
+                <li class="levelone <#tag:emailsection /#>">
+                <a href="#">Email
+                    <#if:show_new_tag_with_email_menu#>
+                        <span class="mnew-tag inline-block">New</span>
+                    <#/if:show_new_tag_with_email_menu#>
+                </a>
+                    <ul class="submenu-parent" id="emailsubmenu">
+                        <li>
+                            <ul>
+                                <#if_show:gapps#>
+                                    <li>
+                                        <span class="menu-icon gapps-micon"></span>
+                                        <div class="menu-content">
+                                            <a href="/google_apps.php">Google Apps for Work<span class="mnew-tag inline-block">New</span></a>
+                                            <p>Email, calendar and storage on any device</p>
+                                        </div>
+                                    </li>
+                                <#/if_show:gapps#>
+                                <#if_show:eeliteus#>
+                                <li>
+                                    <span class="menu-icon business-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/business-email">Business Email</a>
+                                        <p>Simple and powerful webmail.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:eeliteus#>
+                                <#if_show:enterpriseemail#>
+                                <li>
+                                    <span class="menu-icon enterprise-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/web-hosting/enterprise-email-hosting.php">Enterprise Email</a>
+                                        <p>Advanced and Corporate-class email.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:enterpriseemail#>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <#/if_show:mailbox#>
+
+                <#if:show_security_menu#>
+                <li class="levelone <#tag:digicertsection /#>">
+                <a href="<#tag:security_link /#>">Security</a>
+                    <ul class="submenu-parent" id="securitysubmenu">
+                        <li>
+                            <ul>
+                                <#if_show:sslcert#>
+                                <li>
+                                    <span class="menu-icon ssl-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/digital-certificate">SSL Certificates</a>
+                                        <p>Powerful encryption for your data.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:sslcert#>
+                                <#if_show:digicert#>
+                                <li>
+                                    <span class="menu-icon ssl-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/digital-ssl-certificate/index.php">SSL</a>
+                                        <p>Powerful encryption for your data.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:digicert#>
+                                <#if_show:sitelock#>
+                                <li>
+                                    <span class="menu-icon sitelock-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/sitelock.php">SiteLock</a>
+                                        <p>Over 5000 websites get attacked everday. Get SiteLock and secure your website from hackers, viruses and malware.</p>
+                                    </div>
+                                </li>
+                                <#/if_show:sitelock#>
+                                <#if_show:codeguard#>
+                                <li>
+                                    <span class="menu-icon codeguard-micon"></span>
+                                    <div class="menu-content">
+                                        <a href="/codeguard.php">Codeguard Website Backup</a>
+                                        <p>Your data is precious. Secure your website in just a few minutes</p>
+                                    </div>
+                                </li>
+                                <#/if_show:codeguard#>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <#/if:show_security_menu#>
+
+                <#if:show_product_bundle#>
+                <li class="levelone last <#tag:combosection /#>">
+                    <a href="<#tag:prepend_folder_name_combo_offers /#>combo-offers">Combo Offers</a>
+                </li>
+                <#/if:show_product_bundle#>
+
+            </ul>
+        </div>
+        <span class="l-corner"></span>
+        <span class="r-corner"></span>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+$(".navigation li").hover(
+  function () {
+    $(this).addClass("nav-hover");	
+  },
+  function () {
+    $(this).removeClass("nav-hover");
+  }
+);
+
+</script>
+
+<ul id="main-nav" class="menu">
+<li><a href="//dominion.domains">.Autos</li></a>
+<li><a href="//dominion.domains">.Boats</li></a>
+<li><a href="//dominion.domains">.Homes</li></a>
+<li><a href="//dominion.domains">.Motorcycles</li></a>
+<li><a href="//dominion.domains">.Yachts</li></a>
+<li><a href="/dominion-agreement.html">Policies</a></li>
+</ul>
+<header class="nav-slide">
+  <button class="mobile-menu-btn">Menu</button>
+  <a href="/"><br><img class="logo" src='/getImage.php?src=myUploadedImages/ddlogo.png' alt="dominion domains logo" height="50"></a>
+
+

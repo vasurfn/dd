@@ -1,0 +1,199 @@
+<div class="dmn-blurb-wrp grdiant rel">
+<br><br>
+        <div align="center"><font size="6px">Memorable. <font color="#e31d1a">Trusted. </font>Defining.</font></div>
+<div class="ui-subtitle center">Discover your perfect domain name</div>
+<div align="center">
+            <div class="domain-search-box">
+<form action="/domain-registration/index.php" method="post" name="form_domain_avail" id="homepageDomainSearch">
+                    <div class="domain-select-wrapper">                        
+                    <input type="hidden" value="check_availability" name="action">                    
+                   <input type="text" value="enter your website name" name="txtDomainName" class="optionalField domains-input" id="field_domains-input" maxlength="65" onkeydown="remove_error_msg();" >
+                   
+                   
+                                               <button type="submit" class="domain-submit" id="go_btn" onclick="return check_domain_name();">Go</button>
+                          
+                        
+                    </div>
+<br>
+<input id="autos" type="checkbox" name="tld[]" value="autos" checked>
+                           <img class="hover" src="/getImage.php?src=myUploadedImages/autos.jpg" alt=".autos tld domain search" width="100">
+                           <input id="boats" type="checkbox" name="tld[]" value="boats" checked>
+                           <img class="hover" src="/getImage.php?src=myUploadedImages/boats.jpg" alt=".boats tld domain search" width="100">
+                        <input id="homes" type="checkbox" name="tld[]" value="homes" checked>
+<img class="hover" src="/getImage.php?src=myUploadedImages/homes.jpg" alt=".homes tld domain search" width="100">
+                           <input id="motorcycles" type="checkbox" name="tld[]" value="motorcycles" checked>
+                           <img class="hover" src="/getImage.php?src=myUploadedImages/motor.jpg" alt=".motorcycles tld domain search" width="100">
+                           
+                        <input id="yachts" type="checkbox" name="tld[]" value="yachts" checked>
+                        <img class="hover" src="/getImage.php?src=myUploadedImages/yachts.jpg" alt=".yachts tld domain search" width="100">
+ <!-- TERMS WERE HERE -->
+                           
+                    <div id="error_msg" class="error" style="display:none; margin:7px 0;width: 90%">Please enter a domain name.</div>
+               </form><br><br><br>
+</div>
+    <div class="features-wrp">
+    <br><br><br><br>
+<br><hr><br>
+<div align="center"><font size="6px">The Dominion Domains Difference</font>
+ <p> Dominion Domains provides top-level registrations for .Autos, .Boats, .Homes, .Motorcycles and .Yachts domains.
+<br><br>
+Our mission is to provide high quality, industry specific website addresses to the automotive, marine, powersports and residential real estate communities.  Working in partnership with the communities we serve, we enable the creation of industry specific internet content channels that make it safer and easier for consumers to research and find the information they need to make important lifestyle decisions.                           
+    </div>                    
+    <div style=" text-align:center;">
+    <video width="440" height="290" style="border: 1px solid #ebebeb;" controls autoplay muted>
+  <source src="//content.dominion.domains/video/domain-registrar-video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    <script type="text/javascript">
+    $(document).ready(function (){
+
+        $('form[name="form_domain_avail"]').submit(function(){
+            butt = $("#go_btn");
+            var domain_name = $('#field_domains-input').val() + '.' + $(this).val();
+            $("#go_btn").attr('disabled', 'disabled');
+            animButton();
+        });
+        
+    });
+    var step = 1;
+    function animButton()
+    {
+
+        step++;
+        if (step == 7) step = 1;
+        if (step == 1)
+        {
+            window.status = 'Processing. ';
+            butt.html('. ');
+        }
+        if (step == 2)
+        {
+            window.status = 'Processing. ';
+            butt.html('. ');
+        }
+        if (step == 3)
+        {
+            window.status = 'Processing.. ';
+            butt.html('.. ');
+        }
+        if (step == 4)
+        {
+            window.status = 'Processing.. ';
+            butt.html('.. ');
+        }
+        if (step == 5)
+        {
+            window.status = 'Processing... ';
+            butt.html('... ');
+        }
+        if (step == 6)
+        {
+            window.status = 'Processing... ';
+            butt.html('... ');
+        }
+        timeout_id = setTimeout("animButton()", 200);
+    }
+
+    function check_domain_name() // error msg for domian defult value
+    {
+        var domain_name = $("#field_domains-input").val();
+        domain_name = trim(domain_name);
+        if((domain_name.length == 0) || (domain_name.match(/[^a-zA-Z0-9-.s]+/)))
+        {
+            $("#error_msg").show();
+            return false;
+        }
+
+        return true;
+    }
+    
+    function remove_error_msg(){
+        $("#error_msg").hide();
+    }
+    
+    $(document).ready(function(){
+        $('#field_domains-input').textboxValueToggle('enter your website name');
+    });
+    $.fn.textboxValueToggle = function(defaultText) {
+        $(this).focus(function() {
+                if($(this).val()=== defaultText){
+                    $(this).val('').removeClass('optionalField');
+                }
+            }).blur(function() {
+                if($(this).val()==='' ){
+                    $(this).addClass('optionalField').val(defaultText);
+                }
+            });
+    }
+    
+</script>
+           <script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    var myForm = document.getElementById("homepageDomainSearch");
+    var checkForm = function(e) {
+      ...
+      if(!this.terms.checked) {
+        alert("Please indicate that you accept the Terms and Conditions");
+        this.terms.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+    };
+
+    // attach the form submit handler
+    myForm.addEventListener("submit", checkForm, true);
+
+    var myCheckbox = document.getElementById("terms-check");
+    var myCheckboxMsg = "Please indicate that you accept the Terms and Conditions";
+
+    // set the starting error message
+    myCheckbox.setCustomValidity(myCheckboxMsg);
+
+    // attach checkbox handler to toggle error message
+    myCheckbox.addEventListener("change", function() {
+      this.setCustomValidity(this.validity.valueMissing ? myCheckboxMsg : "");
+    }, false);
+
+  }, false);
+
+</script>
+
+ <script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    var myForm = document.getElementById("homepageDomainSearch");
+    var checkForm = function(e) {
+      ...
+      if(!this.fees.checked) {
+        alert("Please indicate that you accept the Fee Conditions");
+        this.terms.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+    };
+
+    // attach the form submit handler
+    myForm.addEventListener("submit", checkForm, true);
+
+    var myCheckbox = document.getElementById("fee-check");
+    var myCheckboxMsg = "Please indicate that you accept the Fee Conditions";
+
+    // set the starting error message
+    myCheckbox.setCustomValidity(myCheckboxMsg);
+
+    // attach checkbox handler to toggle error message
+    myCheckbox.addEventListener("change", function() {
+      this.setCustomValidity(this.validity.valueMissing ? myCheckboxMsg : "");
+    }, false);
+
+  }, false);
+
+</script>
+
+
+  </div>
+</div>
+    
